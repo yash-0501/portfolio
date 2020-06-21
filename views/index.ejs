@@ -28,7 +28,10 @@ https://templatemo.com/tm-531-reflux
     <link rel="stylesheet" href="assets/css/lightbox.css" />
   </head>
 
-  <body>
+  <div id="loading">
+
+  </div>
+  <body onload="loaded()">
     <div id="page-wraper">
       <!-- Sidebar Menu -->
       <div class="responsive-nav">
@@ -513,5 +516,11 @@ https://templatemo.com/tm-531-reflux
         checkSection();
       });
     </script>
+        <script>
+          var preloader = document.getElementById("loading");
+          function loaded() {
+              preloader.style.display = 'none';
+          }
+      </script>
   </body>
 </html>
