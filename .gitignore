@@ -1,5 +1,6 @@
 templatemo_531_reflux
-
+cert.crt
+key.key
 # Logs
 logs
 *.log

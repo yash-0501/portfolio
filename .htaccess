@@ -1,0 +1,13 @@
+RewriteCond %{HTTPS} off
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule .* https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP_REFERER} !^http://yash-agarwal.me/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://yash-agarwal.me$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.yash-agarwal.me/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.yash-agarwal.me$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://yash-agarwal.me/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://yash-agarwal.me$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.yash-agarwal.me/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.yash-agarwal.me$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
